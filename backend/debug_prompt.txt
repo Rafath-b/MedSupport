@@ -1,0 +1,4 @@
+<bos><start_of_turn>user
+<image>
+Transcribe this prescription exactly.<end_of_turn>
+<start_of_turn>model

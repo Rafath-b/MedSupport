@@ -1,0 +1,21 @@
+# Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# MedGemma Models (Large Files)
+# We exclude the weights to keep the repo small.
+# Users should download these from Hugging Face.
+backend/models/
+
+# Sensitive Info
+backend/.env
+.env
+
+# Frontend deps
+frontend/node_modules/
+frontend/dist/
+
+# OS specific
+.DS_Store

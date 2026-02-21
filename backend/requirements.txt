@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+langchain
+langchain-google-genai
+langchain-community
+langsmith
+pillow
+python-dotenv
+mlx-vlm
+torch
