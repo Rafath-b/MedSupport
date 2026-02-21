@@ -17,24 +17,27 @@ MedSupport is a privacy-first, local-first clinical intelligence platform powere
 - **Software**: Python 3.10+, Node.js (for frontend).
 
 ### 2. Setting Up the Local Model (MedGemma)
-**Note**: The model weights are approximately 10GB and are not included in this repository.
-1. Download the **MedGemma 1.5-4b-it** model (quantized for MLX).
-2. Create a folder: `backend/models/medgemma-1.5-4b-it-4bit`
-3. Place the model weights inside that folder.
+**Note**: The model weights (~10GB) are hosted on Hugging Face to keep the repository lightweight.
 
-### 3. Installation
+1. **Automatic Loading**: The system is configured to fetch weights from [Rafath1/medgemma-medsupport-4bit](https://huggingface.co/Rafath1/medgemma-medsupport-4bit) on first run.
+2. **Offline Mode**: Once downloaded, weights are cached in `~/.cache/huggingface/`. For strict offline use, the code will prioritize these local files.
+
+### 3. Installation & Configuration
+
 **Backend**:
 ```bash
 cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env # Add your keys
 ```
 
 **Frontend**:
 ```bash
 cd frontend
 npm install
+cp .env.example .env # Set your VITE_API_URL
 ```
 
 ### 4. Running the Application
