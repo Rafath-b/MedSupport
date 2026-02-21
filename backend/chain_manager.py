@@ -10,7 +10,7 @@ import io
 load_dotenv()
 
 class ChainManager:
-    def __init__(self, model_path="models/medgemma-1.5-4b-it-4bit"):
+    def __init__(self, model_path="Rafath1/medgemma-medsupport-4bit"):
         # Detect if we are running from root or backend
         if not os.path.exists(model_path) and os.path.exists(os.path.join("backend", model_path)):
             model_path = os.path.join("backend", model_path)
